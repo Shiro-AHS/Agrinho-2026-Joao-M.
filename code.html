@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="pt-BR" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O Equilíbrio no Agro Forte</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&amp;family=Nunito:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    html, body { height: 100%; margin: 0; }
+    .font-display { font-family: 'Playfair Display', serif; }
+    .font-body { font-family: 'Nunito', sans-serif; }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    .float { animation: float 3s ease-in-out infinite; }
+    .fade-up { animation: fadeUp 0.8s ease forwards; }
+    .fade-up-d1 { animation-delay: 0.1s; opacity: 0; }
+    .fade-up-d2 { animation-delay: 0.3s; opacity: 0; }
+    .fade-up-d3 { animation-delay: 0.5s; opacity: 0; }
+    .fade-up-d4 { animation-delay: 0.7s; opacity: 0; }
+    .glow { box-shadow: 0 0 40px rgba(251, 146, 60, 0.3); }
+    .card-hover { transition: transform 0.3s, box-shadow 0.3s; }
+    .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(251, 146, 60, 0.2); }
+    .gradient-text { background: linear-gradient(135deg, #f97316, #fbbf24, #f97316); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .bg-pattern { background-image: radial-gradient(circle at 20% 50%, rgba(251,146,60,0.05) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(251,191,36,0.05) 0%, transparent 50%); }
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ <script src="/_sdk/telemetry_sdk.js"></script></head>
+ <body class="h-full font-body">
+  <div id="app" class="w-full h-full overflow-auto bg-pattern" style="background-color: #1a1a2e;"><!-- Navbar -->
+   <nav class="fixed top-0 w-full z-50 backdrop-blur-md border-b" style="background: rgba(26,26,46,0.9); border-color: rgba(251,146,60,0.2);">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+     <div class="flex items-center gap-2"><span class="text-2xl">🍊</span> <span id="nav-title" class="font-display font-bold text-lg" style="color: #f97316;">O Equilíbrio no Agro Forte</span>
+     </div>
+     <div class="hidden md:flex gap-6 text-sm" style="color: #d4d4d8;"><a href="#inicio" class="hover:text-orange-400 transition">Início</a> <a href="#sobre" class="hover:text-orange-400 transition">Sobre</a> <a href="#frutas" class="hover:text-orange-400 transition">Frutas</a> <a href="#sustentabilidade" class="hover:text-orange-400 transition">Sustentabilidade</a>
+     </div>
+    </div>
+   </nav><!-- Hero -->
+   <section id="inicio" class="relative flex items-center justify-center text-center px-6" style="min-height: 90%; padding-top: 80px;">
+    <div class="max-w-4xl mx-auto">
+     <div class="float mb-6"><span class="text-7xl">🍑</span>
+     </div>
+     <h1 id="hero-title" class="font-display font-900 text-4xl md:text-6xl lg:text-7xl gradient-text fade-up fade-up-d1 leading-tight mb-6">O Equilíbrio no Agro Forte</h1>
+     <p id="hero-subtitle" class="text-xl md:text-2xl fade-up fade-up-d2 mb-4" style="color: #fbbf24;">Agro forte, futuro sustentável: Equilíbrio entre a produção e meio ambiente</p>
+     <p id="hero-intro" class="text-base md:text-lg max-w-2xl mx-auto fade-up fade-up-d3" style="color: #a1a1aa;">Descubra como a fruticultura sustentável transforma o campo brasileiro, unindo produtividade e respeito à natureza.</p><a href="#sobre" class="inline-block mt-10 px-8 py-3 rounded-full font-semibold text-sm transition hover:scale-105 fade-up fade-up-d4" style="background: linear-gradient(135deg, #f97316, #fbbf24); color: #1a1a2e;"> Explorar <i data-lucide="arrow-down" style="width:16px;height:16px;display:inline;vertical-align:middle;"></i> </a>
+    </div>
+   </section><!-- Sobre -->
+   <section id="sobre" class="px-6 py-20">
+    <div class="max-w-5xl mx-auto">
+     <h2 class="font-display text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">Por que o equilíbrio importa?</h2>
+     <div class="grid md:grid-cols-3 gap-6">
+      <div class="card-hover rounded-2xl p-6 border" style="background: rgba(251,146,60,0.05); border-color: rgba(251,146,60,0.2);">
+       <div class="text-4xl mb-4">
+        🌱
+       </div>
+       <h3 class="font-display font-bold text-lg mb-2" style="color: #fbbf24;">Produção Consciente</h3>
+       <p class="text-sm leading-relaxed" style="color: #a1a1aa;">Técnicas agrícolas que respeitam o solo, a água e a biodiversidade, garantindo colheitas abundantes sem esgotar recursos.</p>
+      </div>
+      <div class="card-hover rounded-2xl p-6 border" style="background: rgba(251,146,60,0.05); border-color: rgba(251,146,60,0.2);">
+       <div class="text-4xl mb-4">
+        🍊
+       </div>
+       <h3 class="font-display font-bold text-lg mb-2" style="color: #fbbf24;">Fruticultura Sustentável</h3>
+       <p class="text-sm leading-relaxed" style="color: #a1a1aa;">Pomares que integram práticas orgânicas, controle biológico de pragas e polinização natural para frutas mais saudáveis.</p>
+      </div>
+      <div class="card-hover rounded-2xl p-6 border" style="background: rgba(251,146,60,0.05); border-color: rgba(251,146,60,0.2);">
+       <div class="text-4xl mb-4">
+        🌍
+       </div>
+       <h3 class="font-display font-bold text-lg mb-2" style="color: #fbbf24;">Futuro Sustentável</h3>
+       <p class="text-sm leading-relaxed" style="color: #a1a1aa;">Investir em práticas sustentáveis hoje garante que as próximas gerações também possam colher os frutos da terra.</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Frutas -->
+   <section id="frutas" class="px-6 py-20">
+    <div class="max-w-5xl mx-auto">
+     <h2 class="font-display text-3xl md:text-4xl font-bold text-center mb-4 gradient-text">Nossas Frutas</h2>
+     <p class="text-center mb-12 text-sm" style="color: #a1a1aa;">Produção que alia qualidade, sabor e respeito ao meio ambiente</p>
+     <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+      <div class="card-hover rounded-2xl p-5 text-center border" style="background: rgba(251,191,36,0.05); border-color: rgba(251,191,36,0.15);"><span class="text-5xl block mb-3">🍊</span>
+       <p class="font-semibold text-sm" style="color: #fbbf24;">Laranja</p>
+      </div>
+      <div class="card-hover rounded-2xl p-5 text-center border" style="background: rgba(251,191,36,0.05); border-color: rgba(251,191,36,0.15);"><span class="text-5xl block mb-3">🥭</span>
+       <p class="font-semibold text-sm" style="color: #fbbf24;">Manga</p>
+      </div>
+      <div class="card-hover rounded-2xl p-5 text-center border" style="background: rgba(251,191,36,0.05); border-color: rgba(251,191,36,0.15);"><span class="text-5xl block mb-3">🍑</span>
+       <p class="font-semibold text-sm" style="color: #fbbf24;">Pêssego</p>
+      </div>
+      <div class="card-hover rounded-2xl p-5 text-center border" style="background: rgba(251,191,36,0.05); border-color: rgba(251,191,36,0.15);"><span class="text-5xl block mb-3">🍋</span>
+       <p class="font-semibold text-sm" style="color: #fbbf24;">Maracujá</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Sustentabilidade -->
+   <section id="sustentabilidade" class="px-6 py-20">
+    <div class="max-w-4xl mx-auto">
+     <h2 class="font-display text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">Práticas Sustentáveis</h2>
+     <div class="space-y-6">
+      <div class="flex items-start gap-4 p-5 rounded-xl border card-hover" style="background: rgba(251,146,60,0.04); border-color: rgba(251,146,60,0.15);">
+       <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center" style="background: rgba(251,146,60,0.2);"><i data-lucide="droplets" style="width:20px;height:20px;color:#f97316;"></i>
+       </div>
+       <div>
+        <h3 class="font-semibold mb-1" style="color: #fbbf24;">Irrigação Inteligente</h3>
+        <p class="text-sm" style="color: #a1a1aa;">Sistemas de gotejamento que economizam até 60% de água, nutrindo cada planta com precisão.</p>
+       </div>
+      </div>
+      <div class="flex items-start gap-4 p-5 rounded-xl border card-hover" style="background: rgba(251,146,60,0.04); border-color: rgba(251,146,60,0.15);">
+       <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center" style="background: rgba(251,146,60,0.2);"><i data-lucide="bug" style="width:20px;height:20px;color:#f97316;"></i>
+       </div>
+       <div>
+        <h3 class="font-semibold mb-1" style="color: #fbbf24;">Controle Biológico</h3>
+        <p class="text-sm" style="color: #a1a1aa;">Uso de insetos benéficos e microrganismos para combater pragas sem agrotóxicos nocivos.</p>
+       </div>
+      </div>
+      <div class="flex items-start gap-4 p-5 rounded-xl border card-hover" style="background: rgba(251,146,60,0.04); border-color: rgba(251,146,60,0.15);">
+       <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center" style="background: rgba(251,146,60,0.2);"><i data-lucide="recycle" style="width:20px;height:20px;color:#f97316;"></i>
+       </div>
+       <div>
+        <h3 class="font-semibold mb-1" style="color: #fbbf24;">Compostagem e Reciclagem</h3>
+        <p class="text-sm" style="color: #a1a1aa;">Restos de poda e frutas descartadas viram adubo orgânico, fechando o ciclo de nutrientes.</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Footer -->
+   <footer class="px-6 py-10 text-center border-t" style="border-color: rgba(251,146,60,0.15);">
+    <p class="text-sm" style="color: #a1a1aa;">🍊 Programa Agrinho 2025 — <span class="gradient-text font-semibold">Agro forte, futuro sustentável</span></p>
+    <p class="text-xs mt-2" style="color: #525252;">Feito com dedicação para um futuro melhor</p>
+   </footer>
+  </div>
+  <script>
+    lucide.createIcons();
+
+    const defaultConfig = {
+      site_title: "O Equilíbrio no Agro Forte",
+      hero_subtitle: "Agro forte, futuro sustentável: Equilíbrio entre a produção e meio ambiente",
+      intro_text: "Descubra como a fruticultura sustentável transforma o campo brasileiro, unindo produtividade e respeito à natureza.",
+      background_color: "#1a1a2e",
+      primary_color: "#f97316",
+      accent_color: "#fbbf24",
+      text_color: "#a1a1aa",
+      card_color: "#2a2a3e",
+      font_family: "Playfair Display",
+      font_size: 16
+    };
+
+    window.elementSdk.init({
+      defaultConfig,
+      onConfigChange: async (config) => {
+        const bg = config.background_color || defaultConfig.background_color;
+        const primary = config.primary_color || defaultConfig.primary_color;
+        const accent = config.accent_color || defaultConfig.accent_color;
+        const textCol = config.text_color || defaultConfig.text_color;
+        const font = config.font_family || defaultConfig.font_family;
+        const size = config.font_size || defaultConfig.font_size;
+
+        document.getElementById('app').style.backgroundColor = bg;
+        document.getElementById('nav-title').style.color = primary;
+        document.getElementById('hero-title').textContent = config.site_title || defaultConfig.site_title;
+        document.getElementById('hero-subtitle').textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
+        document.getElementById('hero-subtitle').style.color = accent;
+        document.getElementById('hero-intro').textContent = config.intro_text || defaultConfig.intro_text;
+        document.getElementById('hero-intro').style.color = textCol;
+
+        document.querySelectorAll('.font-display').forEach(el => {
+          el.style.fontFamily = `${font}, serif`;
+        });
+        document.getElementById('app').style.fontSize = `${size}px`;
+      },
+      mapToCapabilities: (config) => ({
+        recolorables: [
+          { get: () => config.background_color || defaultConfig.background_color, set: (v) => { config.background_color = v; window.elementSdk.setConfig({ background_color: v }); } },
+          { get: () => config.card_color || defaultConfig.card_color, set: (v) => { config.card_color = v; window.elementSdk.setConfig({ card_color: v }); } },
+          { get: () => config.text_color || defaultConfig.text_color, set: (v) => { config.text_color = v; window.elementSdk.setConfig({ text_color: v }); } },
+          { get: () => config.primary_color || defaultConfig.primary_color, set: (v) => { config.primary_color = v; window.elementSdk.setConfig({ primary_color: v }); } },
+          { get: () => config.accent_color || defaultConfig.accent_color, set: (v) => { config.accent_color = v; window.elementSdk.setConfig({ accent_color: v }); } }
+        ],
+        borderables: [],
+        fontEditable: { get: () => config.font_family || defaultConfig.font_family, set: (v) => { config.font_family = v; window.elementSdk.setConfig({ font_family: v }); } },
+        fontSizeable: { get: () => config.font_size || defaultConfig.font_size, set: (v) => { config.font_size = v; window.elementSdk.setConfig({ font_size: v }); } }
+      }),
+      mapToEditPanelValues: (config) => new Map([
+        ["site_title", config.site_title || defaultConfig.site_title],
+        ["hero_subtitle", config.hero_subtitle || defaultConfig.hero_subtitle],
+        ["intro_text", config.intro_text || defaultConfig.intro_text]
+      ])
+    });
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a0560f14af6e97cc',t:'MTc4MDM5OTEyMg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
